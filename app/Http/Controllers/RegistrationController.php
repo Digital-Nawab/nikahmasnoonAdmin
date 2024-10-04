@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registration;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
@@ -12,8 +13,8 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        //
-        return view('user.user_list');
+        $useData = User::paginate(30);
+        return view('user.user_list', compact('useData'));
     }
 
     /**

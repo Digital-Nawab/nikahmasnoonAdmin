@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\FamilyType;
+use App\Models\Occupation;
 use Illuminate\Http\Request;
 
-class FamilyTypeController extends Controller
+class OccupationController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function FamilyType()
+    public function Occupation()
     {
-       $data = FamilyType::get();
-       return view('admin.tools.family-type', compact('data'));
+        $data = Occupation::get();
+        return view('admin.tools.occupation', compact('data'));
     }
 
     /**
@@ -35,7 +35,7 @@ class FamilyTypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(FamilyType $familyType)
+    public function show(Occupation $occupation)
     {
         //
     }
@@ -43,7 +43,7 @@ class FamilyTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FamilyType $familyType)
+    public function edit(Occupation $occupation)
     {
         //
     }
@@ -51,7 +51,7 @@ class FamilyTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, FamilyType $familyType)
+    public function update(Request $request, Occupation $occupation)
     {
         //
     }
@@ -59,7 +59,7 @@ class FamilyTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(FamilyType $familyType)
+    public function destroy(Occupation $occupation)
     {
         //
     }

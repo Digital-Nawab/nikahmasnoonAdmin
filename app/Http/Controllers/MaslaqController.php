@@ -10,14 +10,13 @@ class MaslaqController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function Maslaq()
     {
-        //
+       $data = Maslaq::where('is_active', '1')->get();
+       return view('admin.tools.maslaq', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
         //

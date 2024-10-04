@@ -7,6 +7,14 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\EnquiryController;
+use App\Http\Controllers\MaslaqController;
+use App\Http\Controllers\FamilyTypeController;
+use App\Http\Controllers\CasteController;
+use App\Http\Controllers\MaritalStatusController;
+use App\Http\Controllers\ProfileForController;
+use App\Http\Controllers\OccupationController;
+use App\Http\Controllers\QualificationController;
+use App\Http\Controllers\EmployeedController;
 
 // Route::get('/', function () {
 //     return view('admin.login');
@@ -30,3 +38,16 @@ Route::post('add-package', [PackageController::class, 'store']);
 // complaint Route
 Route::get('all-enquiry', [EnquiryController::class, 'index']);
 Route::post('add-enquiry', [EnquiryController::class, 'store']);
+
+Route::prefix('tools')->group(function () {
+     Route::get('/profile-for', [ProfileForController::class, 'ProfileFor']);
+     Route::get('/maslaq', [MaslaqController::class, 'Maslaq']);
+     Route::get('/family-type', [FamilyTypeController::class, 'FamilyType']);
+     Route::get('/caste', [CasteController::class, 'Caste']);
+     Route::get('/marital-status', [MaritalStatusController::class, 'MaritalStatus']);
+     Route::get('/occupation', [OccupationController::class, 'Occupation']);
+     Route::get('/qualification', [QualificationController::class, 'Qualification']);
+     Route::get('/employeed-in', [EmployeedController::class, 'Employeed']);
+});
+
+

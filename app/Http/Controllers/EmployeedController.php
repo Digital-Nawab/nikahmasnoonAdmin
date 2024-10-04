@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\FamilyType;
+use App\Models\Employeed;
 use Illuminate\Http\Request;
 
-class FamilyTypeController extends Controller
+class EmployeedController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function FamilyType()
+    public function Employeed()
     {
-       $data = FamilyType::get();
-       return view('admin.tools.family-type', compact('data'));
+        $data = Employeed::get();
+        return view('admin.tools.employeed', compact('data'));
     }
 
     /**
@@ -35,7 +35,7 @@ class FamilyTypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(FamilyType $familyType)
+    public function show(Employeed $employeed)
     {
         //
     }
@@ -43,7 +43,7 @@ class FamilyTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FamilyType $familyType)
+    public function edit(Employeed $employeed)
     {
         //
     }
@@ -51,7 +51,7 @@ class FamilyTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, FamilyType $familyType)
+    public function update(Request $request, Employeed $employeed)
     {
         //
     }
@@ -59,7 +59,7 @@ class FamilyTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(FamilyType $familyType)
+    public function destroy(Employeed $employeed)
     {
         //
     }

@@ -10,9 +10,10 @@ class MaritalStatusController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function MaritalStatus()
     {
-        //
+        $data = MaritalStatus::where('is_active','1')->get();
+        return view('admin.tools.marital-status', compact('data'));
     }
 
     /**

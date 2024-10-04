@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\FamilyType;
+use App\Models\ProfileFor;
 use Illuminate\Http\Request;
 
-class FamilyTypeController extends Controller
+class ProfileForController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function FamilyType()
+    public function ProfileFor()
     {
-       $data = FamilyType::get();
-       return view('admin.tools.family-type', compact('data'));
+        $data = ProfileFor::get();
+        return view('admin.tools.profile_for', compact('data'));
+        
     }
 
     /**
@@ -35,7 +36,7 @@ class FamilyTypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(FamilyType $familyType)
+    public function show(ProfileFor $profileFor)
     {
         //
     }
@@ -43,7 +44,7 @@ class FamilyTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FamilyType $familyType)
+    public function edit(ProfileFor $profileFor)
     {
         //
     }
@@ -51,7 +52,7 @@ class FamilyTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, FamilyType $familyType)
+    public function update(Request $request, ProfileFor $profileFor)
     {
         //
     }
@@ -59,7 +60,7 @@ class FamilyTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(FamilyType $familyType)
+    public function destroy(ProfileFor $profileFor)
     {
         //
     }

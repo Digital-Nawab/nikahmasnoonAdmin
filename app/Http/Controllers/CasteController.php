@@ -10,9 +10,10 @@ class CasteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function Caste()
     {
-        //
+       $caste = Caste::where('is_active', '1')->get();
+       return view('admin.tools.caste', compact('caste'));
     }
 
     /**

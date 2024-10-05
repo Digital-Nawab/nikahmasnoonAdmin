@@ -125,7 +125,7 @@
                     
                 </div>
 
-                <div class="d-flex pt-5">
+                <div class=" pt-5">
                   {{ $useData->links('pagination::bootstrap-5') }}
               </div>
 
